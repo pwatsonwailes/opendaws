@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>OpenDAWS v4.5 | SEOgadget</title>
+
+	<!-- OpenDAWS -->
+	<link rel="stylesheet" href="css/compiled.css">
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mootools/1.4.5/mootools-core-full-compat-yc.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"></script>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+	<![endif]-->
+
+	<link rel="canonical" href="http://seogadget.com/opendaws/"/>
+</head>
+<body>
+<header id="siteheader">
+	<h1>OpenDAWS v4.5</h1>
+	<p><em>The first responsive CSS structured library. Brought to you by SEOgadget, & powered by LESS and LESSHat.</em></p>
+	<p>You can view a <a href="demo.html">demo</a>, and get this site example and the demo as a <a href="/opendaws/opendaws.zip">download</a></p>
+</header>
+<section id="maincontent">
+	<div id="theory">
+		<h2>theory</h2>
+		<p>For a long time, we've built sites that specified column widths in HTML. This leads to a compromised design, with an app or site that looks good on a single large resolution, and reasonable on mobile. It also produces HTML stuffed with non-semantic class names.</p>
+		<p>This isn't good enough.</p>
+		<p>The Open Digital Application Wireframing Styleset (or OpenDAWS) is an attempt to correct this.</p>
+	</div>
+	<div id="opendawsis">
+		<h2>what OpenDAWS is...</h2>
+		<p>OpenDAWS can be thought of as an structured library; that is to say, it's a huge set of resets and helpful classes, as well as the logic for grid layouts, but without any of the constraints of a full framework. There's no fixed grid you have to adhere to. Instead, you simply apply widths to containing element IDs.</p>
+		<p>This means that you can create a design limited in width only by the user's viewport size. Want a design that adapts at 320px, 768px, 1024px, 1600px, 1920px, 2560px & 4096px? Easy!</p>
+		<p>Moreover, by not specifying widths in HTML, we're free to completely change how our design looks at these sizes. Thus an element that's 4 columns width at 320px can be 8 columns width at 1024px, or 9 columns at 1920px, or 16 columns at 4096px. The limit is your design knowledge, rather than fixed HTML.</p>
+	</div>
+	<div id="opendawsisnt">
+		<h2>...& what it isn't</h2>
+		<p>This is <em>not</em> a full framework, in the vein of <a href="http://foundation.zurb.com/">Foundation</a>, <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> or <a href="http://www.getskeleton.com/">Skeleton</a>. Those all come with a set grid, which this doesn't. As such, if you're new to design, I'd suggest going with one of those; they'll give you a firmer foundation on which to learn.</p>
+		<p>It's also not an attempt to style everything. Whilst OpenDAWS includes a full set of typographic stacks, and some pleasant defaults for buttons and forms, it's designed to be extended. As such, you're going to need to write a lot of CSS on top of it.</p>
+		<p>Finally, it's <em>not</em> backwards incompatible. Everything's supported back to IE6, through <a href="http://modernizr.com/">Modernizr</a> and <a href="http://selectivizr.com/">selectivizr</a> powered with Mootools. Feel free to use [attr=], :first/last/only-child, :focus and so on. For added support, you can team it up with NWMatcher or MooTools, for complete IE6+ pseudo class support!</p>
+	</div>
+</section>
+<section id="featuresbenefits">
+	<div id="benefits">
+		<h2>benefits</h2>
+		<ul>
+			<li>Normalised elements for x-broser consistency</li>
+			<li>Baseline aligned typography and forms</li>
+			<li>Automatically responsive type sizes for different resolution sizes</li>
+			<li>Semantically-correct HTML</li>
+			<li>Designs can be designed for each new resolution, rather than set inflexibly in HTML</li>
+			<li>Mobile-first design enforced</li>
+		</ul>
+	</div>
+	<div id="features">
+		<h2>features</h2>
+		<ul>
+			<li>A full set of sans, serif and alternative font stacks, ordered by likely font appearance</li>
+			<li>All the benefits of LESS, plus the LESShat mixin library</li>
+			<li>Beautiful defaults form forms and typography</li>
+			<li>Automatically x-browser compliant grid functionality</li>
+			<li>Box sizing by default to solve padding increasing size bugs</li>
+			<li>Fontawesome built in as the default icon library</li>
+		</ul>
+	</div>
+</section>
+<div id="examples">
+	<h1>Example Code</h1>
+	<section id="basicexample">
+		<h2>basic usage</h2>
+		<div class="samplehtml">
+			<h3>html</h3>
+			<code>
+	&lt;header&gt;...&lt;/header&gt;<br/>
+	&lt;section&gt;<br/>
+	&lt;article&gt;...&lt;/article&gt;<br/>
+	&lt;aside&gt;<br/>
+	&lt;div id="sidebar1"&gt;...&lt;/div&gt;<br/>
+	&lt;div id="sidebar2"&gt;...&lt;/div&gt;<br/>
+	&lt;/aside&gt;<br/>
+	&lt;/section&gt;<br/>
+			</code>
+		</div>
+		<div class="samplecss">
+			<h3>mobile css</h3>
+			<code>
+				section { .row(); .width(6) }<br/>
+				header, article, aside { .col(); .width(6) }<br/>
+			</code>
+		</div>
+	</section>
+	<section id="responsiveexample">
+		<h2>making it responsive</h2>
+		<div class="samplehtml">
+			<h3>desktop css</h3>
+			<code>
+				@media screen and (min-width: 50em) {<br/>
+				header { .width(12); }<br/>
+				article { .width(9); }<br/>
+				aside { .width(3); .gutter(); }<br/>
+				}
+			</code>
+		</div>
+		<div class="samplecss">
+			<h3>hd css</h3>
+			<code>
+				@media screen and (min-width: 86em) {<br/>
+				header { .width(20); }<br/>
+				article { .width(10); }<br/>
+				aside { .width(10); }<br/>
+				sidebar1 { .width(5); }<br/>
+				sidebar2 { .width(5); .gutter(); }<br/>
+				}
+			</code>
+		</div>
+	</section>
+</div>
+<footer id="sitefooter">
+	<h3>details</h3>
+	<p>Created by Pete Wailes, built with LESS and LESSHat. Findable on all major search engines</p>
+</footer>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/augment.js/1.0.0/augment.min.js"></script>
+</body>
+</html>
