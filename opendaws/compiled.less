@@ -1,5 +1,5 @@
 /*
- * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.0.0
+ * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.0.1
  * Collated by Pete Wailes - pete@seogadget.com / pete@wail.es / @petewailes
  *
  * Includes elements from &| inspired by:
@@ -70,6 +70,7 @@ Grid rules & column-widths in variables, in ems
 	position: relative;
 }
 
+.gutter () { margin: @gutter * 1px; }
 .gutter-top () { margin-top: @gutter * 1px; }
 .gutter-right () { margin-right: @gutter * 1px; }
 .gutter-bottom () { margin-bottom: @gutter * 1px; }
@@ -85,6 +86,7 @@ Grid rules & column-widths in variables, in ems
 	margin-bottom: (@gutter / 2) * 1px;
 }
 
+.internal-gutter () { padding: @gutter * 1px; }
 .internal-gutter-top () { padding-top: @gutter * 1px; }
 .internal-gutter-right () { padding-right: @gutter * 1px; }
 .internal-gutter-bottom () { padding-bottom: @gutter * 1px; }
@@ -121,6 +123,19 @@ Grid rules & column-widths in variables, in ems
 @19cols: (19 * @column-and-gutter - @gutter) * 1px;
 @20cols: (20 * @column-and-gutter - @gutter) * 1px;
 @21cols: (21 * @column-and-gutter - @gutter) * 1px;
+
+.width-1 () { width: 8.33333%; }
+.width-2 () { width: 16.66667%; }
+.width-3 () { width: 25%; }
+.width-4 () { width: 33.33333%; }
+.width-5 () { width: 41.66667%; }
+.width-6 () { width: 50%; }
+.width-7 () { width: 58.33333%; }
+.width-8 () { width: 66.66667%; }
+.width-9 () { width: 75%; }
+.width-10 () { width: 83.33333%; }
+.width-11 () { width: 91.66667%; }
+.width-12 () { width: 100%; }
 
 
 // Column-widths in a function, in ems
@@ -192,7 +207,7 @@ applet, basefont, dir, font, isindex, menu, s, strike, u {
 	color: inherit;
 	font-family: inherit;
 	font-size: 100%;
-	400-weight: normal;
+	font-weight: normal;
 	font-style: normal;
 	margin: 0;
 	outline: 0;
@@ -440,7 +455,7 @@ sub { bottom: -0.25em } /* Move subscripted text down */
 /* Media */
 img, object, embed, video { // Fluid images
 	max-width: 100%;
-	-width: 100%
+	width: 100%
 }
 
 img { // Improve IE's resizing of images
@@ -740,63 +755,63 @@ Re-set default cursor for disabled elements
 .col { 
 	.col();
 	.internal-gutter-horizontal();
+}
 
-	&.width-1 { width: 8.33333%; }
-	&.width-2 { width: 16.66667%; }
-	&.width-3 { width: 25%; }
-	&.width-4 { width: 33.33333%; }
-	&.width-5 { width: 41.66667%; }
-	&.width-6 { width: 50%; }
-	&.width-7 { width: 58.33333%; }
-	&.width-8 { width: 66.66667%; }
-	&.width-9 { width: 75%; }
-	&.width-10 { width: 83.33333%; }
-	&.width-11 { width: 91.66667%; }
-	&.width-12 { width: 100%; }
+.col.width-1 { width: 8.33333%; }
+.col.width-2 { width: 16.66667%; }
+.col.width-3 { width: 25%; }
+.col.width-4 { width: 33.33333%; }
+.col.width-5 { width: 41.66667%; }
+.col.width-6 { width: 50%; }
+.col.width-7 { width: 58.33333%; }
+.col.width-8 { width: 66.66667%; }
+.col.width-9 { width: 75%; }
+.col.width-10 { width: 83.33333%; }
+.col.width-11 { width: 91.66667%; }
+.col.width-12 { width: 100%; }
 
-	&.width-offset-0 { margin-left: 0%; }
-	&.width-offset-1 { margin-left: 8.33333%; }
-	&.width-offset-2 { margin-left: 16.66667%; }
-	&.width-offset-3 { margin-left: 25%; }
-	&.width-offset-4 { margin-left: 33.33333%; }
-	&.width-offset-5 { margin-left: 41.66667%; }
-	&.width-offset-6 { margin-left: 50%; }
-	&.width-offset-7 { margin-left: 58.33333%; }
-	&.width-offset-8 { margin-left: 66.66667%; }
-	&.width-offset-9 { margin-left: 75%; }
-	&.width-offset-10 { margin-left: 83.33333%; }
+.col.width-offset-0 { margin-left: 0%; }
+.col.width-offset-1 { margin-left: 8.33333%; }
+.col.width-offset-2 { margin-left: 16.66667%; }
+.col.width-offset-3 { margin-left: 25%; }
+.col.width-offset-4 { margin-left: 33.33333%; }
+.col.width-offset-5 { margin-left: 41.66667%; }
+.col.width-offset-6 { margin-left: 50%; }
+.col.width-offset-7 { margin-left: 58.33333%; }
+.col.width-offset-8 { margin-left: 66.66667%; }
+.col.width-offset-9 { margin-left: 75%; }
+.col.width-offset-10 { margin-left: 83.33333%; }
 
-	&.push { right: auto; }
-	&.pull { left: auto; }
+.col.push { right: auto; }
+.col.pull { left: auto; }
 
-	&.push-1 { left: 8.33333%; }
-	&.push-2 { left: 16.66667%; }
-	&.push-3 { left: 25%; }
-	&.push-4 { left: 33.33333%; }
-	&.push-5 { left: 41.66667%; }
-	&.push-6 { left: 50%; }
-	&.push-7 { left: 58.33333%; }
-	&.push-8 { left: 66.66667%; }
-	&.push-9 { left: 75%; }
-	&.push-10 { left: 83.33333%; }
-	&.push-11 { left: 91.66667%; }
+.col.push-1 { left: 8.33333%; }
+.col.push-2 { left: 16.66667%; }
+.col.push-3 { left: 25%; }
+.col.push-4 { left: 33.33333%; }
+.col.push-5 { left: 41.66667%; }
+.col.push-6 { left: 50%; }
+.col.push-7 { left: 58.33333%; }
+.col.push-8 { left: 66.66667%; }
+.col.push-9 { left: 75%; }
+.col.push-10 { left: 83.33333%; }
+.col.push-11 { left: 91.66667%; }
 
-	&.pull-1 { right: 8.33333%; }
-	&.pull-2 { right: 16.66667%; }
-	&.pull-3 { right: 25%; }
-	&.pull-4 { right: 33.33333%; }
-	&.pull-5 { right: 41.66667%; }
-	&.pull-6 { right: 50%; }
-	&.pull-7 { right: 58.33333%; }
-	&.pull-8 { right: 66.66667%; }
-	&.pull-9 { right: 75%; }
-	&.pull-10 { right: 83.33333%; }
-	&.pull-11 { right: 91.66667%; }
+.col.pull-1 { right: 8.33333%; }
+.col.pull-2 { right: 16.66667%; }
+.col.pull-3 { right: 25%; }
+.col.pull-4 { right: 33.33333%; }
+.col.pull-5 { right: 41.66667%; }
+.col.pull-6 { right: 50%; }
+.col.pull-7 { right: 58.33333%; }
+.col.pull-8 { right: 66.66667%; }
+.col.pull-9 { right: 75%; }
+.col.pull-10 { right: 83.33333%; }
+.col.pull-11 { right: 91.66667%; }
 
-	&.centered {
-		float: none;
-		margin: 0 auto;
-	}
+.col.centered {
+	float: none;
+	margin: 0 auto;
 }
 
 .gutter-top { .gutter-top(); }
