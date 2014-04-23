@@ -1,5 +1,5 @@
 /*
- * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.0.1
+ * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.1.0
  * Collated by Pete Wailes - pete@seogadget.com / pete@wail.es / @petewailes
  *
  * Includes elements from &| inspired by:
@@ -70,12 +70,12 @@ Grid rules & column-widths in variables, in ems
 	position: relative;
 }
 
-.gutter () { margin: @gutter * 1px; }
 .gutter-top () { margin-top: @gutter * 1px; }
 .gutter-right () { margin-right: @gutter * 1px; }
 .gutter-bottom () { margin-bottom: @gutter * 1px; }
 .gutter-left () { margin-left: @gutter * 1px; }
 
+.gutter () { margin: @gutter * 1px; }
 .gutter-horizontal () {
 	margin-left: (@gutter / 2) * 1px;
 	margin-right: (@gutter / 2) * 1px;
@@ -86,12 +86,12 @@ Grid rules & column-widths in variables, in ems
 	margin-bottom: (@gutter / 2) * 1px;
 }
 
-.internal-gutter () { padding: @gutter * 1px; }
 .internal-gutter-top () { padding-top: @gutter * 1px; }
 .internal-gutter-right () { padding-right: @gutter * 1px; }
 .internal-gutter-bottom () { padding-bottom: @gutter * 1px; }
 .internal-gutter-left () { padding-left: @gutter * 1px; }
 
+.internal-gutter () { padding: @gutter * 1px; }
 .internal-gutter-horizontal () {
 	padding-left: (@gutter / 2) * 1px;
 	padding-right: (@gutter / 2) * 1px;
@@ -818,12 +818,17 @@ Re-set default cursor for disabled elements
 .gutter-right { .gutter-right(); }
 .gutter-bottom { .gutter-bottom(); }
 .gutter-left { .gutter-left(); }
+
+.gutter { .gutter(); }
 .gutter-horizontal { .gutter-horizontal(); }
 .gutter-vertical { .gutter-vertical(); }
+
 .internal-gutter-top { .internal-gutter-top(); }
 .internal-gutter-right { .internal-gutter-right(); }
 .internal-gutter-bottom { .internal-gutter-bottom(); }
 .internal-gutter-left { .internal-gutter-left(); }
+
+.internal-gutter { .internal-gutter(); }
 .internal-gutter-horizontal { .internal-gutter-horizontal(); }
 .internal-gutter-vertical { .internal-gutter-vertical(); }
 

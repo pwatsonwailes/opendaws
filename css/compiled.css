@@ -1,5 +1,5 @@
 /*
- * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.0.1
+ * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.1.0
  * Collated by Pete Wailes - pete@seogadget.com / pete@wail.es / @petewailes
  *
  * Includes elements from &| inspired by:
@@ -1027,6 +1027,9 @@ Re-set default cursor for disabled elements
 .gutter-left {
   margin-left: 26px;
 }
+.gutter {
+  margin: 26px;
+}
 .gutter-horizontal {
   margin-left: 13px;
   margin-right: 13px;
@@ -1046,6 +1049,9 @@ Re-set default cursor for disabled elements
 }
 .internal-gutter-left {
   padding-left: 26px;
+}
+.internal-gutter {
+  padding: 26px;
 }
 .internal-gutter-horizontal {
   padding-left: 13px;
