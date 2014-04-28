@@ -363,6 +363,47 @@ dl dd {
 nav ul li {
   margin-left: 0;
 }
+.inline {
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+}
+.inline li {
+  display: block;
+  list-style: none;
+}
+.inline:before,
+.inline:after {
+  content: " ";
+  display: table;
+}
+.inline:after {
+  clear: both;
+}
+.inline li {
+  float: left;
+  margin-left: 1em;
+}
+.inline li:first-child {
+  margin-left: 0;
+}
+.inline li form,
+.inline li input {
+  margin-bottom: 0;
+}
+.inline li:first-child {
+  padding-top: 5px;
+}
+.unstyled-list {
+  padding: 0;
+  list-style-type: none;
+  margin-left: 0;
+}
+.unstyled-list li {
+  display: block;
+  list-style: none;
+}
 /* Quotes */
 blockquote,
 cite,
