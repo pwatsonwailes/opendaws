@@ -392,9 +392,6 @@ nav ul li {
 .inline li input {
   margin-bottom: 0;
 }
-.inline li:first-child {
-  padding-top: 5px;
-}
 .unstyled-list {
   padding: 0;
   list-style-type: none;
@@ -1472,7 +1469,7 @@ address {
   #sitefooter,
   #examples,
   #featuresbenefits {
-    width: 408px;
+    width: 444px;
   }
 }
 @media screen and (max-width: 799px) {
@@ -1501,7 +1498,7 @@ address {
   #sitefooter,
   #examples,
   #featuresbenefits {
-    width: 544px;
+    width: 592px;
   }
 }
 /*
@@ -1570,19 +1567,19 @@ address {
   #sitefooter,
   #examples,
   #featuresbenefits {
-    width: 680px;
+    width: 740px;
   }
   #benefits,
   #features,
   .samplehtml,
   .samplecss {
-    width: 340px;
+    width: 370px;
   }
   #elements,
   #type,
   #inputslabels,
   #textboxes {
-    width: 340px;
+    width: 370px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1375px) {
@@ -1592,7 +1589,7 @@ address {
   #sitefooter,
   #examples,
   #featuresbenefits {
-    width: 952px;
+    width: 1036px;
   }
   #opendawsis,
   #opendawsisnt,
@@ -1600,13 +1597,13 @@ address {
   #features,
   .samplehtml,
   .samplecss {
-    width: 476px;
+    width: 518px;
   }
   #elements,
   #type,
   #inputslabels,
   #textboxes {
-    width: 476px;
+    width: 518px;
   }
 }
 /*
@@ -1619,16 +1616,16 @@ address {
   #sitefooter,
   #examples,
   #featuresbenefits {
-    width: 1224px;
+    width: 1332px;
   }
   #theory,
   #opendawsis,
   #opendawsisnt {
-    width: 408px;
+    width: 444px;
   }
   #benefits,
   #features {
-    width: 612px;
+    width: 666px;
   }
   #basicexample,
   #responsiveexample {
@@ -1637,17 +1634,17 @@ address {
     position: relative;
     padding-left: 13px;
     padding-right: 13px;
-    width: 612px;
+    width: 666px;
   }
   .samplehtml,
   .samplecss {
-    width: 306px;
+    width: 333px;
   }
   #elements,
   #type,
   #inputslabels,
   #textboxes {
-    width: 612px;
+    width: 666px;
   }
 }
 @media screen and (min-width: 1840px) {
@@ -1657,16 +1654,16 @@ address {
   #sitefooter,
   #examples,
   #featuresbenefits {
-    width: 1768px;
+    width: 1924px;
   }
   #theory,
   #opendawsis,
   #opendawsisnt {
-    width: 589.33288px;
+    width: 641.33284px;
   }
   #benefits,
   #features {
-    width: 884px;
+    width: 962px;
   }
   #basicexample,
   #responsiveexample {
@@ -1675,16 +1672,16 @@ address {
     position: relative;
     padding-left: 13px;
     padding-right: 13px;
-    width: 884px;
+    width: 962px;
   }
   .samplehtml,
   .samplecss {
-    width: 442px;
+    width: 481px;
   }
   #elements,
   #type,
   #inputslabels,
   #textboxes {
-    width: 884px;
+    width: 962px;
   }
 }
