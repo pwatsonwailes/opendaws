@@ -1,5 +1,5 @@
 /*
- * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.1.0
+ * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.1.1
  * Collated by Pete Wailes - pete@seogadget.com / pete@wail.es / @petewailes
  *
  * Includes elements from &| inspired by:
@@ -18,13 +18,6 @@ Common Mixins
 @import "lesshat.less";
 
 /* Boot up LessHat */
-
-@w3c: true; // Unprefixed W3C syntax
-@webkit: true; // Chrome 7+, Safari 5+, iOS5, Android
-@moz: true; //  Firefox 4+
-@opera: true; // Opera 10.5+
-@ms: true;  // IE 10+
-@oldWebkit: true; // iOS4, Safari 4, Chrome < 6.
 
 @font-size: 16;			// Base font-size (pixels)
 @line-height: 26;			// Base font-size (pixels)
@@ -368,11 +361,19 @@ dl dd { margin-left: @font-line-ratio * 1em }
 
 nav ul li { margin-left: 0; }
 
-.inline {
-	display: inline-block;
+.unstyled-list-default () {
 	list-style-type: none;
 	margin-left: 0;
-	padding: 0;
+
+	li {
+		display: block;
+		list-style: none;
+	}
+}
+
+.inline-default () {
+	display: inline-block;
+	.unstyled-list-default ();
 
 	&:before, &:after {
 		content: " ";
@@ -381,24 +382,24 @@ nav ul li { margin-left: 0; }
 	&:after { clear: both; }
 
 	li {
-		display: block;
 		float: left;
-		list-style: none;
 		margin-left: 1em;
-		&:first-child { margin-left: 0; }
 
+		&:first-child { margin-left: 0; }
 		form, input { margin-bottom: 0; }
 	}
 }
 
-.unstyled-list {
-	list-style-type: none;
-	margin-left: 0;
+.inline () {
 	padding: 0;
-	li {
-		display: block;
-		list-style: none;
-	}
+	.inline-default ();
+
+	li:first-child { padding-top: 5px; }
+}
+
+.unstyled-list () {
+	padding: 0;
+	.unstyled-list-default ();
 }
 
 /* Quotes */

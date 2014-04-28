@@ -1,5 +1,5 @@
 /*
- * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.1.0
+ * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.1.1
  * Collated by Pete Wailes - pete@seogadget.com / pete@wail.es / @petewailes
  *
  * Includes elements from &| inspired by:
@@ -362,42 +362,6 @@ dl dd {
 }
 nav ul li {
   margin-left: 0;
-}
-.inline {
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 0;
-  padding: 0;
-}
-.inline:before,
-.inline:after {
-  content: " ";
-  display: table;
-}
-.inline:after {
-  clear: both;
-}
-.inline li {
-  display: block;
-  float: left;
-  list-style: none;
-  margin-left: 1em;
-}
-.inline li:first-child {
-  margin-left: 0;
-}
-.inline li form,
-.inline li input {
-  margin-bottom: 0;
-}
-.unstyled-list {
-  list-style-type: none;
-  margin-left: 0;
-  padding: 0;
-}
-.unstyled-list li {
-  display: block;
-  list-style: none;
 }
 /* Quotes */
 blockquote,
@@ -1460,7 +1424,7 @@ address {
 /*
 	Small
 */
-@media screen and (max-width: 39.999em) {
+@media screen and (max-width: 639px) {
   #siteheader,
   #maincontent,
   #forms,
@@ -1470,12 +1434,12 @@ address {
     width: 408px;
   }
 }
-@media screen and (max-width: 49.999em) {
+@media screen and (max-width: 799px) {
   body {
     font-size: 0.875em;
   }
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 800px) {
   h1:first-child,
   h2:first-child,
   h3:first-child {
@@ -1489,7 +1453,7 @@ address {
     line-height: 1.278;
   }
 }
-@media screen and (min-width: 40em) and (max-width: 49.999em) {
+@media screen and (min-width: 640px) and (max-width: 799px) {
   #siteheader,
   #maincontent,
   #forms,
@@ -1502,7 +1466,7 @@ address {
 /*
 	Mid
 */
-@media screen and (max-width: 84.999em) {
+@media screen and (max-width: 1375px) {
   #basicexample,
   #responsiveexample {
     display: block;
@@ -1553,12 +1517,12 @@ address {
     margin: 0;
   }
 }
-@media screen and (min-width: 85em) {
+@media screen and (min-width: 1376px) {
   body {
     font-size: 1.125em;
   }
 }
-@media screen and (min-width: 50em) and (max-width: 63.999em) {
+@media screen and (min-width: 800px) and (max-width: 1023px) {
   #siteheader,
   #maincontent,
   #forms,
@@ -1580,7 +1544,7 @@ address {
     width: 340px;
   }
 }
-@media screen and (min-width: 64em) and (max-width: 84.999em) {
+@media screen and (min-width: 1024px) and (max-width: 1375px) {
   #siteheader,
   #maincontent,
   #forms,
@@ -1607,7 +1571,7 @@ address {
 /*
 	Large
 */
-@media screen and (min-width: 85em) and (max-width: 114.999em) {
+@media screen and (min-width: 1376px) and (max-width: 1839px) {
   #siteheader,
   #maincontent,
   #forms,
@@ -1645,7 +1609,7 @@ address {
     width: 612px;
   }
 }
-@media screen and (min-width: 115em) {
+@media screen and (min-width: 1840px) {
   #siteheader,
   #maincontent,
   #forms,
