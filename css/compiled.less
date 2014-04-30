@@ -351,10 +351,13 @@ ol { list-style: decimal outside; }
 li {
 	font-size: 1em;
 	margin-bottom: 1em;
-	ul, ol { margin: 0 @font-line-ratio * 1em }
+
+	&:last-child,
+	label { margin-bottom: 0; }
+
+	ul, ol { margin: 1em @font-line-ratio * 1em 0; }
 	ul { list-style-type: circle; }
 	ol { list-style-type: lower-alpha; }
-	label { margin-bottom: 0 }
 }
 
 dl dd { margin-left: @font-line-ratio * 1em }
