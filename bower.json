@@ -1,0 +1,14 @@
+{
+  "name": "opendaws",
+  "version": "5.4",
+  "main": "opendaws/compiled.css",
+  "ignore": [
+    "./images/",
+    "./css/",
+    "./demo.html",
+    "./index.html"
+  ],
+  "dependencies": {
+    "lesshat": "3.0.2"
+  }
+}
