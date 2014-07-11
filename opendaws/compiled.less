@@ -1,5 +1,5 @@
 /*
- * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.4.1
+ * Open DAWS - Open Source Digital Application Wireframing Styleshee* Version 5.4.2
  * Collated by Pete Wailes - pete@seogadget.com / pete@wail.es / @petewailes
  *
  * Includes elements from &| inspired by:
@@ -491,21 +491,24 @@ img { // Improve IE's resizing of images
 	-ms-interpolation-mode: bicubic;
 	&::selection { background: transparent; }
 	&::-moz-selection { background: transparent; }
-
-	&.no-max { max-width: none; }
 }
 
 figure {
 	margin: 0;
 	max-width: 100%;
 
-	img { width: 100%; }
+	img {
+		height: auto;
+		width: 100%;
+	}
 
 	figcaption {
 		background: #eee;
 		border-left: 5px solid #999;
 		margin-bottom: @font-line-ratio * 1em;
 		padding: .4em .8em;
+
+		&.center { text-align: center; }
 	}
 }
 svg:not(:root) { overflow: hidden } /* Correct IE9 overflow */
