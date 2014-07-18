@@ -1,6 +1,6 @@
 {
   "name": "opendaws",
-  "version": "5.4",
+  "version": "5.4.2",
   "main": "opendaws/compiled.css",
   "ignore": [
     "./images/",
