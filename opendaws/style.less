@@ -2,75 +2,17 @@
  * Other imports (FontAwesome etc, if used)
 */
 
+@import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css);
 
-
-
-/*
- * Theme mixins
-*/
-
-
-
-
-/*
- * Compiled overrides
-*/
-
-
-
-
-/*
- * Main classes
-*/
-
-
-
+@import "mixins.less";
+@import "overrides.less";
 
 /*
  * Size-agnostic layout rules
 */
 
-@import "size_0.less";
+@import "all.less";
 
-
-
-/*
-	Style overrides for IE6-8
-	http://jonikorpi.com/leaving-old-IE-behind/
-*/
-
-.ie {
-
-}
-
-/*
-	Small
-*/
-@media screen and (max-width: 639px) { @import "size_640.less"; }
-@media screen and (min-width: 640px) { @import "size_640_up.less"; }
-
-@media screen and (max-width: 799px) { @import "size_800.less"; }
-@media screen and (min-width: 800px) { @import "size_800_up.less"; }
-
-@media screen and (min-width: 640px) and (max-width: 799px) { @import "size_640_800.less"; }
-
-/*
-	Mid
-*/
-
-@media screen and (max-width: 1023px) { @import "size_1024.less"; }
-@media screen and (min-width: 1024px) { @import "size_1024_up.less"; }
-
-@media screen and (max-width: 1375px) { @import "size_1376.less"; }
-@media screen and (min-width: 1376px) { @import "size_1376_up.less"; }
-
-@media screen and (min-width: 800px) and (max-width: 1023px) { @import "size_800_1024.less"; }
-@media screen and (min-width: 1024px) and (max-width: 1375px) { @import "size_1024_1376.less"; }
-
-/*
-	Large
-*/
-@media screen and (min-width: 1376px) and (max-width: 1839px) { @import "size_1376_1840.less"; }
-
-@media screen and (max-width: 1839px) { @import "size_1840.less"; }
-@media screen and (min-width: 1840px) { @import "size_1840_up.less"; }
+@media screen and (min-width: 650px) { @import "small.less"; }
+@media screen and (min-width: 985px) { @import "medium.less"; }
+@media screen and (min-width: 1300px) { @import "large.less"; }
