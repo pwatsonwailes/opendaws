@@ -4,8 +4,87 @@
 
 @import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css);
 
-@import "mixins.less";
 @import "overrides.less";
+
+/*
+ * Useful stuff
+*/
+
+/*
+Forms
+*/
+
+.input-group {
+  .display(flex);
+
+  .addon,
+  .button {
+  	background: #fafafa;
+  	border: 1px solid #ddd;
+  	padding: 0 10px;
+  	white-space: nowrap;
+  }
+
+  .addon { border-right: none; }
+
+  .button {
+  	border-left: none;
+  	white-space: nowrap;
+  }
+
+  .input { .flex(1); }
+}
+
+// useful for video embeds, so included
+
+.video_container {
+	height: 0;
+	overflow: hidden;
+	padding: 30px 0 56.25%;
+	position: relative;
+}
+
+.video_container embed, .video_container iframe, .video_container object {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+// Inline lists
+
+ul.inline {
+  list-style-type: none;
+  margin-left: 0;
+	padding: 0;
+
+  > li {
+    display: inline-block;
+
+    > * { display: inline-block; }
+  }
+
+  > li form, input { margin-bottom: 0; }
+}
+
+.pagination > li {
+	&:hover a { background: #eee; }
+
+	a {
+		.border-radius(@radius);
+		.transition(background-color 300ms ease-out);
+		display: block;
+		padding: 0.1rem 0.75rem 0.1rem;
+
+		&.selected {
+			background: #0049cc;
+			color: #fff;
+			cursor: default;
+			font-weight: bold;
+		}
+	}
+}
 
 /*
  * Size-agnostic layout rules

@@ -1,5 +1,111 @@
+/* Shadows */
+
 .panel-depth-1() { .box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)) }
 .panel-depth-2() { .box-shadow(0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4)) }
 .panel-depth-3() { .box-shadow(0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4)) }
 .panel-depth-4() { .box-shadow(0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4)) }
 .panel-depth-5() { .box-shadow(0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4)) }
+
+/* Boot up LessHat */
+
+@font-size: 14;		 // Base font-size (pixels)
+@line-height: 22;		 // Base font-size (pixels)
+@font-line-ratio: 1.6;		// Ratio of line height to font size
+
+@rem: @font-size*1rem;		// Shorthand for outputting ems, e.g. "14/@em"
+
+@radius: 5px;			 // Default radius for borders
+
+@gutter: 1rem;
+@half-gutter:	 0.5rem;
+@outer-margin:	2rem;
+@grid-columns:	12;
+
+@xl-break: 1675px;
+@lg-break: 1300px;
+@md-break: 985px;
+@sm-break: 650px;
+
+//default sizings
+@col-names: sm, md, lg;
+@col-breaks: @sm-break, @md-break, @lg-break;
+
+// .for
+.for(@i, @n) {.-each(@i)}
+.for(@n)		 when (isnumber(@n)) {.for(1, @n)}
+.for(@i, @n) when not (@i = @n)	{
+	.for((@i + (@n - @i) / abs(@n - @i)), @n);
+}
+
+// .for-each
+.for-each(@array)	 when (default()) {.for-impl_(length(@array))}
+.for-impl_(@i) when (@i > 1)		{.for-impl_((@i - 1))}
+.for-impl_(@i) when (@i > 0)		{.-each(extract(@array, @i))}
+
+.makegrid(@class) {
+	.make-cols(@class);
+	.make-offsets(@class);
+	.make-position-classes(@class);
+}
+
+.make-column(@class; @col-number) {
+	.col-@{class}-@{col-number} {
+		flex-basis: ((100% / @grid-columns) * @col-number);
+		max-width: ((100% / @grid-columns) * @col-number);
+	}
+}
+
+.make-cols(@class; @col-number: @grid-columns) when (@col-number > 0) {
+	.make-cols(@class; (@col-number - 1));
+	.make-column(@class; @col-number);
+}
+
+.make-offset(@class; @col-number) {
+	.col-@{class}-offset-@{col-number} { margin-left: ((100% / @grid-columns) * @col-number); }
+}
+
+.make-offsets(@class; @col-number: (@grid-columns - 1)) when (@col-number > 0) {
+	.make-offsets(@class; (@col-number - 1));
+	.make-offset(@class; @col-number);
+}
+
+.make-position-classes(@class) {
+
+	.start-@{class} {
+		.justify-content(flex-start);
+		text-align: start;
+	}
+	.center-@{class} {
+		.justify-content(center);
+		text-align: center;
+	}
+	.end-@{class} {
+		.justify-content(flex-end);
+		text-align: end;
+	}
+
+	.top-@{class} { .align-items(flex-start); }
+	.middle-@{class} { .align-items(center); }
+	.bottom-@{class} { .align-items(flex-end); }
+	.around-@{class} { .justify-content(space-around); }
+	.between-@{class} { .justify-content(space-between); }
+	.first-@{class} { .order(-1); }
+	.last-@{class} { .order(1); }
+}
+
+.od-row() {
+	.box-sizing(border-box);
+	.display(flex);
+	.flex-direction(row);
+	.flex-wrap(wrap);
+}
+
+.od-col() {
+	.box-sizing(border-box);
+	.flex-direction(column);
+	.flex-grow(1);
+	.flex-basis(0);
+	max-width: 100%;
+	padding-right: @half-gutter;
+	padding-left: @half-gutter;
+}
