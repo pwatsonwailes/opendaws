@@ -15,4 +15,4 @@ And advanced CSS wizardry inspired by:
 * Rachel Andrew - https://rachelandrew.co.uk/about/
 * Jen Simmons - http://jensimmons.com/about
 
-Thanks to all who've helped develop the idea. See what it can do here: [Fly Me to the Moon](https://wail.es/fly-me-to-the-moon/)
+Thanks to all who've helped develop the idea. See what it can do here: [Fly Me to the Moon](https://toughcompetent.com/fly-me-to-the-moon/)
